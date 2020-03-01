@@ -5,7 +5,7 @@ This React Native app allows users to create decks and questions to quiz themsel
 Clone the repository, change directories, and use `npm install` or `yarn install` to install the dependencies.
 
 ```
-$ git clone https://github.com/converyj/mobile-flashcards.git
+$ git clone https://github.com/converyj/mobile-flashcards-new.git
 $ cd mobile-flashcards
 $ npm install
 ```
