@@ -1,14 +1,13 @@
 import React from "react";
-import { Text, View, Platform, StatusBar } from "react-native";
+import { View, StatusBar } from "react-native";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducers";
 import middleware from "./middleware";
 import { Stack } from "./components/navigation";
-// import { setLocalNotification } from "./utils/notifications";
+import { setLocalNotification } from "./utils/notifications";
 import Constants from "expo-constants";
 import { purple } from "./utils/colors";
-import DeckList from "./components/DeckList";
 
 function FlashStatusBar({ backgroundColor, ...props }) {
 	return (
@@ -19,6 +18,11 @@ function FlashStatusBar({ backgroundColor, ...props }) {
 }
 
 export default class App extends React.Component {
+	componentDidMount() {
+		// set notification if user hasn't studied that day
+		setLocalNotification();
+	}
+
 	render() {
 		return (
 			<Provider store={createStore(reducer, middleware)}>

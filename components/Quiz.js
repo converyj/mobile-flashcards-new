@@ -199,8 +199,8 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 		paddingTop: 20,
 		paddingBottom: 20,
-		paddingLeft: 16,
-		paddingRight: 16,
+		paddingLeft: 20,
+		paddingRight: 20,
 		flexGrow: 1
 	},
 	questionWrapper: {
