@@ -6,7 +6,6 @@ const DECKS_STORAGE_KEY = "MOBILE_FLASHCARDS:deck";
  * get all decks 
  */
 export function getDecks() {
-	console.log("getDecks api.js");
 	return AsyncStorage.getItem(DECKS_STORAGE_KEY).then((data) => {
 		return data === null
 			? AsyncStorage.setItem(DECKS_STORAGE_KEY, JSON.stringify(decks))

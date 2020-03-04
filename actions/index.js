@@ -16,7 +16,6 @@ export const REMOVE_DECK = "REMOVE_DECK";
 
 // recieve all decks from storage and add to store
 export function recieveDecks(decks) {
-	console.log(decks);
 	return {
 		type: RECIEVE_DECKS,
 		decks
