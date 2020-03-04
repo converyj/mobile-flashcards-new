@@ -5,7 +5,7 @@ import TouchButton from "./TouchButton";
 import QuizResults from "./QuizResults";
 import { gray, green, red, textGray, darkGray, white } from "../utils/colors";
 import { connect } from "react-redux";
-// import ViewPager from "@react-native-community/viewpager";
+import ViewPager from "@react-native-community/viewpager";
 
 // constants for possible answers
 const answer = {
@@ -124,7 +124,12 @@ class Quiz extends Component {
 
 		// display one quiz question at a time with viewPager
 		return (
-			<View>
+			<ViewPager
+				style={styles.container}
+				scrollEnabled={false}
+				ref={(viewPager) => {
+					this.viewPager = viewPager;
+				}}>
 				{questions.map((question, idx) => (
 					<View style={styles.pageStyle} key={idx}>
 						<View>
@@ -162,7 +167,7 @@ class Quiz extends Component {
 						</View>
 					</View>
 				))}
-			</View>
+			</ViewPager>
 		);
 	}
 }

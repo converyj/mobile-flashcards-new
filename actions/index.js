@@ -72,8 +72,9 @@ export function handleAddCardToDeck(title, card) {
 export function handleAddDeckTitle(title) {
 	return (dispatch) => {
 		dispatch(showLoading());
-		dispatch(addDeck(title));
-		return saveDeckTitle(title).then(() => dispatch(hideLoading()));
+		return saveDeckTitle(title)
+			.then(() => dispatch(addDeck(title)))
+			.then(() => dispatch(hideLoading()));
 	};
 }
 
