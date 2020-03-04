@@ -4,10 +4,10 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducers";
 import middleware from "./middleware";
-import { Stack } from "./components/navigation";
 import { setLocalNotification } from "./utils/notifications";
 import Constants from "expo-constants";
 import { purple } from "./utils/colors";
+import { Stack } from "./components/navigation";
 
 function FlashStatusBar({ backgroundColor, ...props }) {
 	return (

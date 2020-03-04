@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Platform } from "react-native";
 import { white, gray } from "./../utils/colors";
 import { PropTypes } from "prop-types";
 

@@ -6,6 +6,7 @@ import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import { white, purple } from "../../utils/colors";
 import { createAppContainer } from "react-navigation";
 import AddDeck from "./../AddDeck";
+import AddCard from "./../AddCard";
 
 // Tab Navigation
 const tabObject = {

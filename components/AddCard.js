@@ -48,7 +48,7 @@ class AddCard extends Component {
 		return (
 			<Fragment>
 				<KeyboardAvoidingView style={styles.container}>
-					<Text>Add a Question to the {title} deck</Text>
+					<Text>Add a Question to the deck</Text>
 					<TextInput
 						style={styles.input}
 						placeholder="Question"
@@ -90,9 +90,7 @@ const styles = StyleSheet.create({
 
 // decks is not being used? - which is better to get title from navigation twice or put it in props?
 function mapStateToProps(decks, { navigation }) {
-	const { title } = navigation.state.params;
-	return {
-		title
-	};
+	// const { title } = navigation.state.params;
+	return {};
 }
 export default connect(mapStateToProps, { handleAddCardToDeck })(AddCard);

@@ -28,7 +28,7 @@ export function setLocalNotification() {
 
 					// set notification for 8PM
 					let tomorrow = new Date();
-					tomorrow.setDate(tomorrow.getDate() + 1);
+					tomorrow.setDate(tomorrow.getDate());
 					tomorrow.setHours(20);
 					tomorrow.setMinutes(0);
 

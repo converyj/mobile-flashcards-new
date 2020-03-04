@@ -6,15 +6,12 @@ const DECKS_STORAGE_KEY = "MOBILE_FLASHCARDS:deck";
  * get all decks 
  */
 export function getDecks() {
-	try {
-		return AsyncStorage.getItem(DECKS_STORAGE_KEY).then((data) => {
-			return data === null
-				? AsyncStorage.setItem(DECKS_STORAGE_KEY, JSON.stringify(decks))
-				: JSON.parse(data);
-		});
-	} catch (error) {
-		console.log(error);
-	}
+	console.log("getDecks api.js");
+	return AsyncStorage.getItem(DECKS_STORAGE_KEY).then((data) => {
+		return data === null
+			? AsyncStorage.setItem(DECKS_STORAGE_KEY, JSON.stringify(decks))
+			: JSON.parse(data);
+	});
 }
 
 // be able to get specific deck to use in saveCardToDeck method

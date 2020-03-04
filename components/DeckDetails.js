@@ -7,6 +7,14 @@ import TouchButton from "./TouchButton";
 import { darkGray, gray, red } from "./../utils/colors";
 import { handleRemoveDeck } from "./../actions";
 
+/**
+ * Deck Details:
+ *  - show the specific deck that was pressed
+ *  - option to add question to deck
+ *  - option to start quiz
+ *  - option to delete deck
+ * Use TouchButton Component to hold the stardard styles of buttons and pass parameters to it
+ */
 class DeckDetails extends Component {
 	static propTypes = {
 		navigation: PropTypes.object.isRequired,
