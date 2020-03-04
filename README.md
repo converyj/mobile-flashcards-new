@@ -1,6 +1,8 @@
 # Mobile Flashcards 
 This React Native app allows users to create decks and questions to quiz themselves 
 
+Uses HTML, CSS, React/Redux, AsyncStorage
+
 # Installation
 Clone the repository, change directories, and use `npm install` or `yarn install` to install the dependencies.
 
